@@ -1,0 +1,47 @@
+#cfacebook {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    z-index: 999999999999999;
+    height: auto;
+    box-shadow: 6px 6px 6px 10px rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+}
+
+#cfacebook .fchat {
+    float: left;
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    display: none;
+    background-color: #fff;
+}
+
+#cfacebook .fchat .fb-page {
+    margin-top: -130px;
+    float: left;
+}
+
+#cfacebook a.chat_fb {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    padding: 15px 15px;
+    margin: 0;
+    line-height: 0;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    background-color: #3a5795;
+    border: 0;
+    border-bottom: 1px solid #133783;
+    z-index: 9999999;
+}
+
+#cfacebook a.chat_fb:hover {
+    color: yellow;
+    text-decoration: none;
+}
