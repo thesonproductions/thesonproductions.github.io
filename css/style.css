@@ -17,6 +17,7 @@
 
 html,
 body {
+    overflow-x: hidden;
     background-image: url('../images/background/bg.png');
 }
 
@@ -37,8 +38,8 @@ button {
 }
 
 .s11-fwb {
-    font-size: 14px;
-    /* font-weight: bolder; */
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .s11-b-fwb {
@@ -57,6 +58,10 @@ button {
 
 .radius {
     border-radius: 50px;
+}
+
+.m-1024px {
+    max-width: 1300px!important;
 }
 
 .width-75 {
@@ -87,6 +92,10 @@ button {
     padding: 20px;
 }
 
+.padding-5px {
+    padding: 10px;
+}
+
 .button-absolute {
     position: absolute;
 }
@@ -115,19 +124,38 @@ button {
     font-size: 18px;
 }
 
+:root {
+    --width-now: 1496px;
+}
+
+.vn-font {
+    color: #10228c;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.header {
+    background-image: url("../images/background-header.png");
+}
+
+#title-banner {
+    padding-top: 7%;
+    padding-left: 7%;
+    padding-bottom: 3%;
+    padding-right: 7%;
+}
+
 .banner {
-    position: relative;
     background-image: url("../images/BANNER-PHP.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    max-height: 800px;
-    min-height: 550px;
     width: 100%;
+    min-height: calc(var(--width-now) * 0.4);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
 .banner button {
-    position: absolute;
     background: linear-gradient(to right, #2d74ea, #306ae7, #2f5de2, #3B3BD9);
     border: none;
     color: white;
@@ -135,9 +163,9 @@ button {
     font-size: 22px;
     height: 50px;
     width: 250px;
-    bottom: 10%;
-    left: 20%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-left: 20%;
+    margin-top: -10%;
 }
 
 .banner button:hover {
@@ -211,12 +239,17 @@ button {
 }
 
 .background-section-2 {
+    overflow: hidden;
     position: relative;
-    background-image: url("../images/Preview.jpg");
+    background-image: url("../images/plan.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
+}
+
+.pointer-scale {
+    transition: all 0.1s ease;
 }
 
 .pointer-scale:hover {
@@ -226,7 +259,7 @@ button {
 
 .background-section-3 {
     position: relative;
-    background-image: url("../images/a.jpg");
+    background-image: url("../images/Asset\ 1.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -235,7 +268,7 @@ button {
 
 .reposrt-content {
     background-color: #ffffff;
-    min-height: 500px;
+    min-height: 370px;
 }
 
 .button-register {
@@ -301,19 +334,180 @@ button {
     overflow: hidden!important;
 }
 
+
+/* .star span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
+    animation: animate 3s linear infinite;
+}
+
+.star span::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(315deg) translateX(-1500px);
+        opacity: 0;
+    }
+}
+
+.star span:nth-child(1) {
+    top: 0;
+    right: 0;
+    left: initial;
+    animation-delay: 0;
+    animation-duration: 1s;
+}
+
+.star span:nth-child(2) {
+    top: 0;
+    right: 80px;
+    left: initial;
+    animation-delay: 0.2s;
+    animation-duration: 3s;
+}
+
+.star span:nth-child(3) {
+    top: 80px;
+    right: 0px;
+    left: initial;
+    animation-delay: 0.4s;
+    animation-duration: 2s;
+}
+
+.star span:nth-child(4) {
+    top: 0;
+    right: 180px;
+    left: initial;
+    animation-delay: 0.6s;
+    animation-duration: 1.5s;
+}
+
+.star span:nth-child(5) {
+    top: 0;
+    right: 400px;
+    left: initial;
+    animation-delay: 0.8s;
+    animation-duration: 2.5s;
+}
+
+.star span:nth-child(6) {
+    top: 0;
+    right: 600px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
+
+.star span:nth-child(7) {
+    top: 300px;
+    right: 0px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 1.75s;
+}
+
+.star span:nth-child(8) {
+    top: 0px;
+    right: 700px;
+    left: initial;
+    animation-delay: 1.4s;
+    animation-duration: 1.25s;
+}
+
+.star span:nth-child(9) {
+    top: 0px;
+    right: 1000px;
+    left: initial;
+    animation-delay: 0.75s;
+    animation-duration: 2.25s;
+}
+
+.star span:nth-child(10) {
+    top: 0px;
+    right: 1000px;
+    left: initial;
+    animation-delay: 2.75s;
+    animation-duration: 2.25s;
+} */
+
 @media (max-width: 960px) {
     .reButton {
         display: none;
     }
     .banner {
-        min-height: 350px;
+        min-height: 260px;
+        height: auto;
     }
     .s11-fwb {
-        font-size: 18px!important;
+        font-size: 14px!important;
         /* font-weight: bolder; */
     }
     .reposrt-content {
         background-color: #ffffff;
         min-height: 300px;
+    }
+    .p-10 {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        transform: translate(10px, 10px);
+    }
+    .trftrl {
+        transform: translate(10px, 10px);
+    }
+    .tsl-10 {
+        padding-top: 25px;
+        transform: translate(10px, 10px);
+    }
+    .res-width {
+        max-width: 50%!important;
+    }
+}
+
+@media (max-width: 1104px) {
+    .s11-fwb {
+        font-size: 12px!important;
+        /* font-weight: bolder; */
+    }
+}
+
+@media (min-width: 1600px) {
+    .s11-fwb {
+        font-size: 18px!important;
+        /* font-weight: bolder; */
+    }
+}
+
+@media (min-width: 2000px) {
+    .s11-fwb {
+        font-size: 20px!important;
+        /* font-weight: bolder; */
+    }
+}
+
+@media (min-width: 2200px) {
+    .s11-fwb {
+        font-size: 22px!important;
+        /* font-weight: bolder; */
     }
 }
