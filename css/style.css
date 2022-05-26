@@ -665,6 +665,9 @@ button {
     #icon-unknown {
         display: none;
     }
+    .title {
+        transform: scale(1.75);
+    }
 }
 
 @media (max-width: 960px) {
@@ -700,6 +703,9 @@ button {
     }
     .hide-res {
         display: none;
+    }
+    .title {
+        transform: scale(1.75);
     }
 }
 
