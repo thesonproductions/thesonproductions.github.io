@@ -89,19 +89,19 @@
                 <div class="container">
                     <div class="row padding-20px" style="text-align:center;">
                         <div class="col-lg-3 col-md-3 col-6 dts">
-                            <h2 class="count">5</h2>
+                            <h2 class="count" id="count1">5</h2>
                             <h5>CƠ SỞ ĐÀO TẠO</h5>
                         </div>
                         <div class="col-lg-3 col-md-3 col-6 dts">
-                            <h2 class="count">1200</h2>
+                            <h2 class="count" id="count2">1200</h2>
                             <h5>HỌC VIÊN</h5>
                         </div>
                         <div class="col-lg-3 col-md-3 col-6 dts">
-                            <h2 class="count">60</h2>
+                            <h2 class="count" id="count3">60</h2>
                             <h5>ĐỐI TÁC TUYỂN DỤNG</h5>
                         </div>
                         <div class="col-lg-3 col-md-3 col-6 dts">
-                            <h2 class="count">98%</h2>
+                            <h2 class="count" id="count4">98%</h2>
                             <h5>CÓ VIỆC LÀM</h5>
                         </div>
                     </div>
@@ -824,7 +824,7 @@
             <div class="container-fluid no-padding">
                 <div class="container-fluid sbody background-section-6">
                     <div class="section-body display-flex">
-                        <div class="title display-flex ">
+                        <div class="title display-flex wow bounceIn">
                             <img src="./images/background/img9.png" alt="" class="max-width wow bounceIn margin-auto">
                         </div>
                     </div>
@@ -916,6 +916,7 @@
     });
 
     $(document).ready(function() {
+
         var start = "ec1";
         var startPage = "page1";
         $('.end-course').click(function() {
@@ -941,6 +942,44 @@
             $('.' + startPage).attr("style", "display:block;");
         });
 
+    })
+
+    function animateNumber(finalNumber, duration = 5000, startNumber = 0, callback) {
+        const startTime = performance.now()
+
+        function updateNumber(currentTime) {
+            const elapsedTime = currentTime - startTime
+            if (elapsedTime > duration) {
+                callback(finalNumber)
+            } else {
+                const rate = elapsedTime / duration
+                const currentNumber = Math.round(rate * finalNumber)
+                callback(currentNumber)
+                requestAnimationFrame(updateNumber)
+            }
+        }
+        requestAnimationFrame(updateNumber)
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        animateNumber(5, 3000, 0, function(number) {
+            const formattedNumber = number.toLocaleString()
+            document.getElementById('count1').innerText = formattedNumber
+        })
+
+        animateNumber(12000, 3000, 0, function(number) {
+            const formattedNumber = number.toLocaleString()
+            document.getElementById('count2').innerText = formattedNumber
+        })
+
+        animateNumber(60, 3000, 0, function(number) {
+            const formattedNumber = number.toLocaleString()
+            document.getElementById('count3').innerText = formattedNumber
+        })
+        animateNumber(98, 3000, 0, function(number) {
+            const formattedNumber = number.toLocaleString()
+            document.getElementById('count4').innerText = formattedNumber + "%";
+        })
     })
 </script>
 
