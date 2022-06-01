@@ -854,6 +854,22 @@ button {
     .got-you {
         width: 360px;
     }
+    .page {
+        display: flex;
+        justify-content: space-around;
+    }
+    .choose-you {
+        background-color: #ffffff;
+        color: black;
+        font-weight: 900;
+        border-radius: 15px;
+        height: 100%;
+        width: 100%;
+    }
+    .choose-you h3 {
+        position: relative;
+        left: 0;
+    }
 }
 
 @media (max-width: 1104px) {
