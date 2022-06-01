@@ -840,6 +840,20 @@ button {
     /* .title {
         transform: scale(1.75);
     } */
+    .main-logo {
+        height: 150px;
+        width: 150px;
+    }
+    .activity1 {
+        margin: auto !important;
+    }
+    .activity1::after {
+        content: "";
+        display: none;
+    }
+    .got-you {
+        width: 360px;
+    }
 }
 
 @media (max-width: 1104px) {
