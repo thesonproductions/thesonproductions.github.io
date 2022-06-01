@@ -231,6 +231,12 @@ button {
     max-width: 100%!important;
 }
 
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 .max-height {
     max-height: 100%!important;
 }
@@ -324,7 +330,7 @@ button {
     padding-left: 7%;
     padding-bottom: 3%;
     padding-right: 7%;
-    animation: scale 10s linear infinite;
+    animation: scale 5s linear infinite;
 }
 
 @keyframes scale {
@@ -772,7 +778,7 @@ button {
 .border-logo {
     border-radius: 50%;
     z-index: 9;
-    border: 15px solid white;
+    border: 15px solid #F7F7F9;
 }
 
 .logo-it {
