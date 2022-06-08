@@ -837,6 +837,10 @@ button {
     padding-top: 2.5%;
 }
 
+.resfontheader {
+    display: none;
+}
+
 @media (max-width: 767px) {
     .middle {
         display: none;
@@ -855,6 +859,16 @@ button {
 }
 
 @media (max-width: 960px) {
+    .respace {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .resfontheader {
+        display: block;
+    }
+    .resaligncenter {
+        text-align: center;
+    }
     .number-benifit span {
         margin: auto;
         font-size: 30px;
@@ -897,7 +911,7 @@ button {
         transform: translate(10px, 10px);
     }
     .res-width {
-        max-width: 35%!important;
+        max-width: 65%!important;
     }
     .hide-res {
         display: none;
