@@ -386,7 +386,7 @@ button {
 
 .section-body {
     width: 100%;
-    padding: 3%;
+    padding: 1%;
 }
 
 .title {
@@ -831,6 +831,10 @@ button {
 
 #container3res ul li {
     border-radius: 15px;
+}
+
+.respadding7 {
+    padding-top: 2.5%;
 }
 
 @media (max-width: 767px) {
