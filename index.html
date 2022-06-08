@@ -1251,29 +1251,29 @@
         });
 
 
-        var start = "ec1 ";
-        var startPage = "page1 ";
+        var start = "ec1";
+        var startPage = "page1";
         $('.end-course').click(function() {
 
-            $("# " + start).removeClass('got-you');
-            $('.ul-' + start).attr("style ", "display:none; ");
+            $("#" + start).removeClass('got-you');
+            $('.ul-' + start).attr("style", "display:none;");
 
             start = this.id;
 
-            $("# " + start).addClass('got-you');
+            $("#" + start).addClass('got-you');
 
             $('.ul-' + start).attr('style', 'display:block;');
         });
 
         $('.page').click(function() {
-            $("# " + startPage).removeClass('choose-you');
-            $('.' + startPage).css("display ", "none ");
+            $("#" + startPage).removeClass('choose-you');
+            $('.' + startPage).css("display", "none");
 
             startPage = this.id;
 
-            $("# " + startPage).addClass('choose-you');
+            $("#" + startPage).addClass('choose-you');
 
-            $('.' + startPage).attr("style ", "display:block; ");
+            $('.' + startPage).attr("style", "display:block; ");
         });
 
     })
