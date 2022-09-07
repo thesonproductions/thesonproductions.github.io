@@ -325,8 +325,8 @@ button {
 }
 
 .vn-font {
-    color: #0d1c72;
-    font-size: 18px;
+    color: #10228c;
+    font-size: 22px;
     font-weight: bold;
     margin-top: 10px;
 }
@@ -647,7 +647,7 @@ button {
 }
 
 .count {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #364894;
     font-weight: bold;
 }
